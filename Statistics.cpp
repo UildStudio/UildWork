@@ -140,12 +140,12 @@ int main()
         if(p=='3'){
             cout<<endl<<endl;
             cout<<"计算行请按1，计算列请按2"<<endl;
-            char js='3';
+            char js;
             js=getch();
             int jshl=0;
             long long zs=0;
             double pj=0;
-            if(js='1'){
+            if(js=='1'){
                 cout<<"请输入要计算的行数：";
                 cin>>jshl;
                 jshl--;
@@ -154,7 +154,7 @@ int main()
                 }
                 pj=zs/b;
             }
-            else{
+            if(js=='2'){
                 cout<<"请输入要计算的列数：";
                 cin>>jshl;
                 jshl--;
