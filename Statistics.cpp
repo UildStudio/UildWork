@@ -99,7 +99,9 @@ int main()
         cout<<endl<<"目录"<<endl;
         cout<<"【1】编辑"<<endl;
         cout<<"【2】清空"<<endl;
-        cout<<"【3】导出"<<endl;
+        cout<<"【3】计算"<<endl;
+        cout<<"【4】导出"<<endl;
+        cout<<"【5】退出"<<endl;
         char p;
         cout<<endl<<"请输入选项：";
         p=getch();
@@ -121,7 +123,7 @@ int main()
                 }
             }
         }
-        if(p=='3'){
+        if(p=='4'){
             ofstream outfile;
             outfile.open("Statistics.txt");
             for(int i=0;i<a;i++){
@@ -134,6 +136,42 @@ int main()
             outfile.close();
             cout<<endl<<"导出完成！请至软件安装目录查看Statistics.txt"<<endl<<endl;
             system("pause");
+        }
+        if(p=='3'){
+            cout<<endl<<endl;
+            cout<<"计算行请按1，计算列请按2"<<endl;
+            char js='3';
+            js=getch();
+            int jshl=0;
+            long long zs=0;
+            double pj=0;
+            if(js='1'){
+                cout<<"请输入要计算的行数：";
+                cin>>jshl;
+                jshl--;
+                for(int i=0;i<b;i++){
+                    zs=zs+x[jshl][i];
+                }
+                pj=zs/b;
+            }
+            else{
+                cout<<"请输入要计算的列数：";
+                cin>>jshl;
+                jshl--;
+                for(int i=0;i<a;i++){
+                    zs=zs+x[i][jshl];
+                }
+                pj=zs/a;
+            }
+            system("cls");
+            cout<<"计算结果："<<endl;
+            cout<<"总数："<<zs<<endl;
+            cout<<"平均："<<pj<<endl;
+            cout<<endl;
+            system("pause");
+        }
+        if(p=='5'){
+            return 0;
         }
         system("cls");
     }
