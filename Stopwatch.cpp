@@ -25,6 +25,8 @@ int main()
         cout<<endl<<"【1】实时时钟"<<endl;
         cout<<"【2】正计时"<<endl;
         cout<<"【3】倒计时"<<endl;
+        cout<<"【4】小闹钟"<<endl;
+        cout<<"【5】退出程序"<<endl;
         cout<<"请选择模式：";
         char ms;
         ms=getch();
@@ -32,6 +34,8 @@ int main()
         if(ms=='1')system("start shishishizhong.exe");
         if(ms=='2')system("start zhengjishi.exe");
         if(ms=='3')system("start daojishi.exe");
+        if(ms=='4')system("start naozhong.exe");
+        if(ms=='5')return 0;
         system("cls");
     }
     return 0;
